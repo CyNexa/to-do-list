@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@300&family=Ubuntu&display=swap');
+*{
+    border: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #7B66FF;
+    background-image: url(dot.png);
+    background-size: 2vh;
+    background-repeat: repeat;
+}
+.ehr {
+    height: 2px;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin: 0px 40px;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+}
+.hd1 {
+    margin: 10px;
+    font-family: 'ubuntu';
+    font-weight: 100;
+}
+.add {
+    margin: 10px 50px;
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 1px solid #7743DB;
+    padding: 5px;
+    border-radius: 10px;
+}
+.add:hover {
+    border:1px solid coral;
+}
+.tasks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.hd3 {
+    font-family: 'quicksand';
+    align-self: center;
+}
+#taskList {
+    margin: 10px 20px;
+    font-family: 'open sans';
+}
+.tasks ul li button {
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 2px solid #7743DB;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'ubuntu';
+}
+.add_tasks {
+    display: flex;
+    flex-direction: column;
+}
+/* ------------------ UnUtilized ------------------ */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+@media only screen and (max-width: 480px) {
+    #app {
+        width: 100%;
+    }
+}
