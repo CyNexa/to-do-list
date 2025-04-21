@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100 text-gray-800">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hierarchical TODO App</title>
+    <link rel="stylesheet" href="/css/output.css" />
+</head>
+
+<body class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="flex justify-between items-center bg-white p-6 ">
+        <div class="flex items-center">
+            <svg class="w-[35px] h-[35px] border-2 border-blue-500 rounded-lg p-1"
+            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.4" d="M11 19.5H21" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.4" d="M11 12.5H21" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.4" d="M11 5.5H21" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 5.5L4 6.5L7 3.5" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 12.5L4 13.5L7 10.5" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 19.5L4 20.5L7 17.5" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+            </svg>
+            <h1 class="ml-2 font-bold text-2xl">Hierarchical Todo</h1>
+        </div>
+        <button onclick="toggleAddTask()" class="flex items-center font-semibold rounded-lg px-5 py-2 cursor-pointer bg-blue-500 hover:bg-blue-600 text-white transition duration-300 ease-in-out">
+            <svg class="w-[20px] h-[20px] mr-1"
+                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Add Task
+        </button>
+    </header>
+    <form id="addTask" class="hidden m-5 p-5 space-y-4 border border-gray-300 rounded-lg">
+        <div>
+            <input type="text" id="task-title" placeholder="Main task title"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+                required />
+        </div>
+        <div>
+            <textarea id="task-desc" placeholder="Description (optional)"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+        </div>
+        <div class="flex justify-end space-x-4">
+            <button onclick="cancelAddTask()" class="px-5 py-2 border border-gray-300 rounded-lg transition cursor-pointer">Cancel</button>
+            <button type="submit" class="bg-blue-500 text-white px-5 py-2 border border-blue-500 hover:border-blue-600 rounded-lg hover:bg-blue-600 transition cursor-pointer">Add Task</button>
+        </div>
+        
+    </form>
+    <main class="bg-white py-6 px-6">
+        <h2 id="myTasksH2" class="font-bold text-2xl">My Tasks</h2>
+        <ul id="task-list" class="px-5 space-y-2">
+            
+        </ul>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        function toggleAddTask() {
+            const addTaskForm = document.getElementById('addTask');
+            addTaskForm.classList.toggle('hidden');
+        }
+        function cancelAddTask() {
+            document.getElementById('addTask').classList.add('hidden');
+        }
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyNexa/to-do-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyNexa/to-do-list/issues"
+  },
+  "homepage": "https://github.com/CyNexa/to-do-list#readme",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "tailwindcss": "^4.1.4",
+    "uuid": "^11.1.0"
+  }
+}
